@@ -23,7 +23,7 @@ describe(@"CreditCard", ^{
             [[theValue([CreditCard_Validator checkCardWithNumber:@"5453"]) should] equal:theValue(CreditCardTypeMasterCard)];
         });
         
-        it(@"should be MasterCard", ^{
+        it(@"should be Amex", ^{
             [[theValue([CreditCard_Validator checkCardWithNumber:@"3434"]) should] equal:theValue(CreditCardTypeAmex)];
         });
         
