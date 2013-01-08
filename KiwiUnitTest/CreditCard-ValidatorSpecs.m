@@ -3,7 +3,7 @@
 
 SPEC_BEGIN(CreditCard_ValidatorSpecs)
 
-describe(@"CreditCard", ^{
+describe(@"CreditCard-Validator", ^{
     context(@"Check for CreditCard Type", ^{
         __block CreditCard_Validator *creditCard = nil;
         
