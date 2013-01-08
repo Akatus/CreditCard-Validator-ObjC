@@ -18,4 +18,5 @@ typedef NS_ENUM(NSInteger, CreditCardType) {
 
 @interface CreditCard_Validator : NSObject
 
+- (CreditCardType)checkCardWithNumber:(NSString *)cardNumber;
 @end

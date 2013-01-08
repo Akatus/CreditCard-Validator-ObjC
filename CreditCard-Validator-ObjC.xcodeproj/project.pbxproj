@@ -22,9 +22,9 @@
 		E14DEF8E169C514F00B0C07E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14DEF5F169C509900B0C07E /* UIKit.framework */; };
 		E14DEF8F169C514F00B0C07E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14DEF61169C509900B0C07E /* Foundation.framework */; };
 		E14DEF95169C515000B0C07E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E14DEF93169C515000B0C07E /* InfoPlist.strings */; };
-		E14DEF98169C515000B0C07E /* KiwiUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E14DEF97169C515000B0C07E /* KiwiUnitTest.m */; };
 		E14DEFAF169C573100B0C07E /* CreditCard-Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = E14DEFAE169C573100B0C07E /* CreditCard-Validator.m */; };
 		E14DEFB3169C5B7500B0C07E /* CreditCard-Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = E14DEFAE169C573100B0C07E /* CreditCard-Validator.m */; };
+		E14DEFEB169C76D200B0C07E /* CreditCard-ValidatorSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E14DEFEA169C76D200B0C07E /* CreditCard-ValidatorSpecs.m */; };
 		F635B40E9DE348A8B9349004 /* libPods-KiwiUnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C9A898FDEF4B0D80113BD8 /* libPods-KiwiUnitTest.a */; };
 /* End PBXBuildFile section */
 
@@ -61,12 +61,11 @@
 		E14DEF8C169C514F00B0C07E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E14DEF92169C515000B0C07E /* KiwiUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiwiUnitTest-Info.plist"; sourceTree = "<group>"; };
 		E14DEF94169C515000B0C07E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E14DEF96169C515000B0C07E /* KiwiUnitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiwiUnitTest.h; sourceTree = "<group>"; };
-		E14DEF97169C515000B0C07E /* KiwiUnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiwiUnitTest.m; sourceTree = "<group>"; };
 		E14DEF99169C515000B0C07E /* KiwiUnitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KiwiUnitTest-Prefix.pch"; sourceTree = "<group>"; };
 		E14DEFA2169C518700B0C07E /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		E14DEFAD169C573100B0C07E /* CreditCard-Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CreditCard-Validator.h"; path = "CreditCard-Validator/CreditCard-Validator.h"; sourceTree = "<group>"; };
 		E14DEFAE169C573100B0C07E /* CreditCard-Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CreditCard-Validator.m"; path = "CreditCard-Validator/CreditCard-Validator.m"; sourceTree = "<group>"; };
+		E14DEFEA169C76D200B0C07E /* CreditCard-ValidatorSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CreditCard-ValidatorSpecs.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,9 +157,8 @@
 		E14DEF90169C515000B0C07E /* KiwiUnitTest */ = {
 			isa = PBXGroup;
 			children = (
-				E14DEF96169C515000B0C07E /* KiwiUnitTest.h */,
-				E14DEF97169C515000B0C07E /* KiwiUnitTest.m */,
 				E14DEF91169C515000B0C07E /* Supporting Files */,
+				E14DEFEA169C76D200B0C07E /* CreditCard-ValidatorSpecs.m */,
 			);
 			path = KiwiUnitTest;
 			sourceTree = "<group>";
@@ -343,8 +341,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E14DEF98169C515000B0C07E /* KiwiUnitTest.m in Sources */,
 				E14DEFB3169C5B7500B0C07E /* CreditCard-Validator.m in Sources */,
+				E14DEFEB169C76D200B0C07E /* CreditCard-ValidatorSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
