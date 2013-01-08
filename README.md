@@ -3,6 +3,8 @@ CreditCard Validator
 
 A simple Objective-C validator for CreditCards in worldwide
 
+License
+===
 The MIT License (MIT)
 Copyright (c) 2013 [Akatus](http://akatus.com)
 
