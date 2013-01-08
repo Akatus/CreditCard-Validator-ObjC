@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, CreditCardType) {
     CreditCardTypeMasterCard,
     CreditCardTypeDinersClub,
     CreditCardTypeAmex,
+    CreditCardTypeDiscover,
     CreditCardTypeUnknown
 };
 

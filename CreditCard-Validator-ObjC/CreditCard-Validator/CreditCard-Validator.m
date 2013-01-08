@@ -15,6 +15,7 @@
 #define kMASTER_CARD_TYPE @"^5[1-5][0-9]{2}$"
 #define kAMEX_TYPE		@"^3[47][0-9]{2}$"
 #define kDINERS_CLUB_TYPE	@"^3(?:0[0-5]|[68][0-9])[0-9]$"
+#define kDISCOVER_TYPE		@"^6(?:011|5[0-9]{2})$"
 
 #import "CreditCard-Validator.h"
 
@@ -41,6 +42,9 @@
                 break;
             case CreditCardTypeDinersClub:
                 regex = [NSRegularExpression regularExpressionWithPattern:kDINERS_CLUB_TYPE options:0 error:&error];
+                break;
+            case CreditCardTypeDiscover:
+                regex = [NSRegularExpression regularExpressionWithPattern:kDISCOVER_TYPE options:0 error:&error];
                 break;
 		}
         
