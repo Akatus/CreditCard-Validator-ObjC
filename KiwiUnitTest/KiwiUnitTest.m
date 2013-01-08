@@ -7,6 +7,7 @@
 //
 
 #import "KiwiUnitTest.h"
+#import "CreditCard-Validator.h"
 
 @implementation KiwiUnitTest
 
@@ -22,11 +23,6 @@
     // Tear-down code here.
     
     [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in KiwiUnitTest");
 }
 
 @end
