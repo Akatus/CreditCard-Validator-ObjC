@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, CreditCardType) {
     CreditCardTypeMasterCard,
     CreditCardTypeDinersClub,
     CreditCardTypeAmex,
-    CreditCardTypeInvalid
+    CreditCardTypeUnknown
 };
 
 @interface CreditCard_Validator : NSObject

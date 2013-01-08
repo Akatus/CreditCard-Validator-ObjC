@@ -14,24 +14,24 @@
 
 - (CreditCardType)checkCardWithNumber:(NSString *)cardNumber
 {
-    if([cardNumber length] < 4) return CreditCardTypeInvalid;
+    if([cardNumber length] < 4) return CreditCardTypeUnknown;
  
     CreditCardType cardType;
     NSRegularExpression *regex;
     NSError *error;
-    for(NSUInteger i = 0; i < CreditCardTypeInvalid; ++i) {
+    for(NSUInteger i = 0; i < CreditCardTypeUnknown; ++i) {
 		switch(i) {
             case CreditCardTypeVisa:
                 cardType = CreditCardTypeVisa;
                 regex = [NSRegularExpression regularExpressionWithPattern:kVISA_TYPE options:0 error:&error];
                 break;
-
 		}
+
 		NSUInteger matches = [regex numberOfMatchesInString:cardNumber options:0 range:NSMakeRange(0, 4)];
         if(matches == 1) return cardType;
 	}
     
     
-    return CreditCardTypeInvalid;
+    return CreditCardTypeUnknown;
 }
 @end
