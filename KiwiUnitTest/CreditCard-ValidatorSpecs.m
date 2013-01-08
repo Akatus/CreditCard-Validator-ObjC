@@ -20,7 +20,16 @@ describe(@"CreditCard", ^{
         });
         
         pending(@"should be MasterCard", nil);
+        
+        pending(@"should be Amex", nil);
 
+        pending(@"should be DinersClub", nil);
+        
+        pending(@"should be Discover", nil);
+        
+        pending(@"should be ELO", nil);
+        
+        pending(@"should be HiperCard", nil);
     });
 });
 
