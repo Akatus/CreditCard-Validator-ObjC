@@ -12,11 +12,11 @@ describe(@"CreditCard", ^{
         });
         
         it(@"should be a Unknown type", ^{
-            [[theValue([creditCard checkCardWithNumber:@"0000"]) should] equal:theValue(CreditCardTypeUnknown)];
+            [[theValue([CreditCard_Validator checkCardWithNumber:@"0000"]) should] equal:theValue(CreditCardTypeUnknown)];
         });
         
         it(@"should be Visa", ^{
-            [[theValue([creditCard checkCardWithNumber:@"4012"]) should] equal:theValue(CreditCardTypeVisa)];
+            [[theValue([CreditCard_Validator checkCardWithNumber:@"4012"]) should] equal:theValue(CreditCardTypeVisa)];
         });
         
         pending(@"should be MasterCard", nil);

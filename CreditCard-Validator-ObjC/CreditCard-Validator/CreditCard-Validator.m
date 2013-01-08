@@ -12,7 +12,7 @@
 
 @implementation CreditCard_Validator
 
-- (CreditCardType)checkCardWithNumber:(NSString *)cardNumber
++ (CreditCardType)checkCardWithNumber:(NSString *)cardNumber
 {
     if([cardNumber length] < 4) return CreditCardTypeUnknown;
  
