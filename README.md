@@ -3,6 +3,23 @@ CreditCard Validator
 
 A simple Objective-C validator for CreditCards in worldwide
 
+Valid Brands
+===
+
+###Worldwide
+
+* Visa
+* Master Card
+* DinersClub
+* Amex
+* Discover
+
+### Credit Card Brands on Brasil
+
+* Elo
+* HiperCard
+
+
 License
 ===
 The MIT License (MIT)
