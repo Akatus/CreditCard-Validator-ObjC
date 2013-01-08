@@ -35,6 +35,10 @@ describe(@"CreditCard-Validator", ^{
             [[theValue([CreditCard_Validator checkCardWithNumber:@"6511"]) should] equal:theValue(CreditCardTypeDiscover)];
         });
         
+        it(@"should not Amex", ^{
+            [[theValue([CreditCard_Validator checkCardWithNumber:@"5439129304394532"]) shouldNot] equal:theValue(CreditCardTypeAmex)];
+        });
+        
         pending(@"should be ELO", nil);
         
         pending(@"should be HiperCard", nil);
