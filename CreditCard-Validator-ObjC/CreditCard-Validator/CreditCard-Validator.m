@@ -13,6 +13,7 @@
 
 #define kVISA_TYPE        @"^4[0-9]{3}?"
 #define kMASTER_CARD_TYPE @"^5[1-5][0-9]{2}$"
+#define kAMEX_TYPE		@"^3[47][0-9]{2}$"
 
 #import "CreditCard-Validator.h"
 
@@ -21,7 +22,7 @@
 + (CreditCardType)checkCardWithNumber:(NSString *)cardNumber
 {
     if([cardNumber length] < 4) return CreditCardTypeUnknown;
- 
+    
     CreditCardType cardType;
     NSRegularExpression *regex;
     NSError *error;
@@ -34,8 +35,11 @@
             case CreditCardTypeMasterCard:
                 regex = [NSRegularExpression regularExpressionWithPattern:kMASTER_CARD_TYPE options:0 error:&error];
                 break;
+            case CreditCardTypeAmex:
+                regex = [NSRegularExpression regularExpressionWithPattern:kAMEX_TYPE options:0 error:&error];
+                break;
 		}
-
+        
 		NSUInteger matches = [regex numberOfMatchesInString:cardNumber options:0 range:NSMakeRange(0, 4)];
         if(matches == 1) return cardType;
 	}

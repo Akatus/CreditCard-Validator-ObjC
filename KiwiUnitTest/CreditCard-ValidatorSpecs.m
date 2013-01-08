@@ -23,7 +23,9 @@ describe(@"CreditCard", ^{
             [[theValue([CreditCard_Validator checkCardWithNumber:@"5453"]) should] equal:theValue(CreditCardTypeMasterCard)];
         });
         
-        pending(@"should be MasterCard", nil);
+        it(@"should be MasterCard", ^{
+            [[theValue([CreditCard_Validator checkCardWithNumber:@"3434"]) should] equal:theValue(CreditCardTypeAmex)];
+        });
         
         pending(@"should be Amex", nil);
 
