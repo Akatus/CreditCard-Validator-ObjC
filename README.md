@@ -14,11 +14,10 @@ Valid Brands
 * Amex
 * Discover
 
-### <strike>Credit Card Brands on Brasil
+### <s>Credit Card Brands on Brasil</s>
 
-* Elo
-* HiperCard
-</strike>
+* <s>Elo</s>
+* <s>HiperCard</s>
 
 License
 ===
