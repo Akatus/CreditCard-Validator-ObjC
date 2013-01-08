@@ -27,9 +27,9 @@ describe(@"CreditCard", ^{
             [[theValue([CreditCard_Validator checkCardWithNumber:@"3434"]) should] equal:theValue(CreditCardTypeAmex)];
         });
         
-        pending(@"should be Amex", nil);
-
-        pending(@"should be DinersClub", nil);
+        it(@"should be DinersClub", ^{
+            [[theValue([CreditCard_Validator checkCardWithNumber:@"3001"]) should] equal:theValue(CreditCardTypeDinersClub)];
+        });
         
         pending(@"should be Discover", nil);
         
