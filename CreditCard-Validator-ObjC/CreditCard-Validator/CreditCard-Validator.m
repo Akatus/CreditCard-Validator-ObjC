@@ -28,9 +28,12 @@
     CreditCardType cardType;
     NSRegularExpression *regex;
     NSError *error;
+    
     for(NSUInteger i = 0; i < CreditCardTypeUnknown; ++i) {
+    
         cardType = i;
-		switch(i) {
+		
+        switch(i) {
             case CreditCardTypeVisa:
                 regex = [NSRegularExpression regularExpressionWithPattern:kVISA_TYPE options:0 error:&error];
                 break;
@@ -50,6 +53,7 @@
         
 		NSUInteger matches = [regex numberOfMatchesInString:cardNumber options:0 range:NSMakeRange(0, 4)];
         if(matches == 1) return cardType;
+        
 	}
     
     return CreditCardTypeUnknown;
