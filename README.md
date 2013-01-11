@@ -1,11 +1,12 @@
 CreditCard Validator
 =========================
----
+
 A simple Objective-C validator for CreditCards using Luhn Algorithm [http://en.wikipedia.org/wiki/Luhn_algorithm](http://en.wikipedia.org/wiki/Luhn_algorithm)
+And brand checks using Regex [http://www.regular-expressions.info/creditcard.html](http://www.regular-expressions.info/creditcard.html)
 
 Check Brands
 ===
----
+
 ### Worldwide
 
 * Visa
@@ -22,21 +23,31 @@ Not implemented yet!
 
 How to Use
 ===
----
 
-	Copy CreditCard-Validator folder in your project
+#### Install 
+
+Copy CreditCard-Validator folder in your project
 	
 	#import "CreditCard-Validator.h"
 
-##Check Brand
+OR
+
+Using Cocoapods
+
+	Not published yet!
+	
+#### Check Brand
+
+Check Brand returns a CreditCardBrand 
 
 	[CreditCard_Validator checkCardBrandWithNumber:@"6511324312345421"];
 
-##Check card number 
+#### Check card number 
+
+Check Card Number return BOOL YES or NO
 
 	[CreditCard_Validator checkCreditCardNumber:@"4545232346469999"];
 	
-
 
 ### License
 ===
