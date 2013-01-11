@@ -5,12 +5,6 @@ SPEC_BEGIN(CreditCard_ValidatorSpecs)
 
 describe(@"CreditCard-Validator", ^{
     context(@"Check for CreditCard Type", ^{
-        __block CreditCard_Validator *creditCard = nil;
-        
-        beforeEach(^{
-            creditCard = [[CreditCard_Validator alloc] init];
-        });
-        
         it(@"should be a Unknown type", ^{
             [[theValue([CreditCard_Validator checkCardWithNumber:@"0000"]) should] equal:theValue(CreditCardTypeUnknown)];
         });
@@ -42,6 +36,20 @@ describe(@"CreditCard-Validator", ^{
         pending(@"should be ELO", nil);
         
         pending(@"should be HiperCard", nil);
+    });
+    
+    context(@"Check for Valid CreditCard", ^{
+        it(@"should not be valid", ^{
+            [[theValue([CreditCard_Validator checkCreditCardNumber:@"4545232346469999"]) shouldNot] equal:theValue(YES)];
+        });
+        
+        it(@"should be valid", ^{
+            [[theValue([CreditCard_Validator checkCreditCardNumber:@"4012001038443335"]) should] equal:theValue(YES)];
+        });
+        
+        it(@"should not be invalid", ^{
+            [[theValue([CreditCard_Validator checkCreditCardNumber:@"4012001038443335"]) shouldNot] equal:theValue(NO)];
+        });
     });
 });
 

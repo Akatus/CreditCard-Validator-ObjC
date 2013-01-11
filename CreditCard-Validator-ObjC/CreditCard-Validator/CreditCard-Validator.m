@@ -21,7 +21,7 @@
 
 @implementation CreditCard_Validator
 
-+ (CreditCardType)checkCardWithNumber:(NSString *)cardNumber
++ (CreditCardType)checkCardTypeWithNumber:(NSString *)cardNumber
 {
     if([cardNumber length] < 4) return CreditCardTypeUnknown;
     
@@ -57,5 +57,32 @@
 	}
     
     return CreditCardTypeUnknown;
+}
+
++ (BOOL)checkCreditCardNumber:(NSString *)cardNum
+{
+    NSAssert(cardNum && cardNum != @"" , @"checkCreditCardNumber: cardNum is nil.");
+    
+    NSInteger len = [cardNum length];
+    NSInteger sumNumOdd = 0;
+    NSInteger sumNumEven = 0;
+    BOOL isOdd = YES;
+    
+    for (NSInteger i = len - 1; i >= 0; i--) {
+        
+        NSInteger num = [cardNum substringWithRange:NSMakeRange(i, 1)].integerValue;
+        if (isOdd) {
+            sumNumOdd += num;
+        }else{
+            num = num * 2;
+            if (num > 9) {
+                num = num - 9;
+            }
+            sumNumEven += num;
+        }
+        isOdd = !isOdd;
+    }
+    
+    return ((sumNumOdd + sumNumEven) % 10 == 0);
 }
 @end
