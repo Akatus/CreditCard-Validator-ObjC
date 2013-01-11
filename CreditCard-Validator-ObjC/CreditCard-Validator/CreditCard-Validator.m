@@ -21,32 +21,32 @@
 
 @implementation CreditCard_Validator
 
-+ (CreditCardType)checkCardTypeWithNumber:(NSString *)cardNumber
++ (CreditCardBrand)checkCardBrandWithNumber:(NSString *)cardNumber
 {
-    if([cardNumber length] < 4) return CreditCardTypeUnknown;
+    if([cardNumber length] < 4) return CreditCardBrandUnknown;
     
-    CreditCardType cardType;
+    CreditCardBrand cardType;
     NSRegularExpression *regex;
     NSError *error;
     
-    for(NSUInteger i = 0; i < CreditCardTypeUnknown; ++i) {
+    for(NSUInteger i = 0; i < CreditCardBrandUnknown; ++i) {
     
         cardType = i;
 		
         switch(i) {
-            case CreditCardTypeVisa:
+            case CreditCardBrandVisa:
                 regex = [NSRegularExpression regularExpressionWithPattern:kVISA_TYPE options:0 error:&error];
                 break;
-            case CreditCardTypeMasterCard:
+            case CreditCardBrandMasterCard:
                 regex = [NSRegularExpression regularExpressionWithPattern:kMASTER_CARD_TYPE options:0 error:&error];
                 break;
-            case CreditCardTypeAmex:
+            case CreditCardBrandAmex:
                 regex = [NSRegularExpression regularExpressionWithPattern:kAMEX_TYPE options:0 error:&error];
                 break;
-            case CreditCardTypeDinersClub:
+            case CreditCardBrandDinersClub:
                 regex = [NSRegularExpression regularExpressionWithPattern:kDINERS_CLUB_TYPE options:0 error:&error];
                 break;
-            case CreditCardTypeDiscover:
+            case CreditCardBrandDiscover:
                 regex = [NSRegularExpression regularExpressionWithPattern:kDISCOVER_TYPE options:0 error:&error];
                 break;
 		}
@@ -56,7 +56,7 @@
         
 	}
     
-    return CreditCardTypeUnknown;
+    return CreditCardBrandUnknown;
 }
 
 + (BOOL)checkCreditCardNumber:(NSString *)cardNum

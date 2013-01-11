@@ -8,18 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, CreditCardType) {
-    CreditCardTypeVisa,
-    CreditCardTypeMasterCard,
-    CreditCardTypeDinersClub,
-    CreditCardTypeAmex,
-    CreditCardTypeDiscover,
-    CreditCardTypeUnknown
+typedef NS_ENUM(NSInteger, CreditCardBrand) {
+    CreditCardBrandVisa,
+    CreditCardBrandMasterCard,
+    CreditCardBrandDinersClub,
+    CreditCardBrandAmex,
+    CreditCardBrandDiscover,
+    CreditCardBrandUnknown
 };
 
 @interface CreditCard_Validator : NSObject
 
-+ (CreditCardType)checkCardWithNumber:(NSString *)cardNumber;
++ (CreditCardBrand)checkCardBrandWithNumber:(NSString *)cardNumber;
 + (BOOL)checkCreditCardNumber:(NSString *)cardNum;
 
 @end
