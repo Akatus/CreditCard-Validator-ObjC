@@ -59,30 +59,29 @@
     return CreditCardBrandUnknown;
 }
 
-+ (BOOL)checkCreditCardNumber:(NSString *)cardNum
++ (BOOL)checkCreditCardNumber:(NSString *)cardNumber
 {
-    NSAssert(cardNum && cardNum != @"" , @"checkCreditCardNumber: cardNum is nil.");
-    
-    NSInteger len = [cardNum length];
-    NSInteger sumNumOdd = 0;
-    NSInteger sumNumEven = 0;
+    NSInteger len = [cardNumber length];
+    NSInteger oddDigits = 0;
+    NSInteger evenDigits = 0;
     BOOL isOdd = YES;
     
     for (NSInteger i = len - 1; i >= 0; i--) {
         
-        NSInteger num = [cardNum substringWithRange:NSMakeRange(i, 1)].integerValue;
+        NSInteger number = [cardNumber substringWithRange:NSMakeRange(i, 1)].integerValue;
         if (isOdd) {
-            sumNumOdd += num;
+            oddDigits += number;
         }else{
-            num = num * 2;
-            if (num > 9) {
-                num = num - 9;
+            number = number * 2;
+            if (number > 9) {
+                number = number - 9;
             }
-            sumNumEven += num;
+            evenDigits += number;
         }
         isOdd = !isOdd;
     }
     
-    return ((sumNumOdd + sumNumEven) % 10 == 0);
+    return ((oddDigits + evenDigits) % 10 == 0);
 }
+
 @end
