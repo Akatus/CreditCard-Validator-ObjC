@@ -1,12 +1,12 @@
 CreditCard Validator
 =========================
+---
+A simple Objective-C validator for CreditCards using Luhn Algorithm [http://en.wikipedia.org/wiki/Luhn_algorithm](http://en.wikipedia.org/wiki/Luhn_algorithm)
 
-A simple Objective-C validator for CreditCards in worldwide
-
-Valid Brands
+Check Brands
 ===
-
-###Worldwide
+---
+### Worldwide
 
 * Visa
 * Master Card
@@ -16,10 +16,29 @@ Valid Brands
 
 ### <s>Credit Card Brands on Brasil</s>
 
+Not implemented yet!
 * <s>Elo</s>
 * <s>HiperCard</s>
 
-License
+How to Use
+===
+---
+
+	Copy CreditCard-Validator folder in your project
+	
+	#import "CreditCard-Validator.h"
+
+##Check Brand
+
+	[CreditCard_Validator checkCardBrandWithNumber:@"6511324312345421"];
+
+##Check card number 
+
+	[CreditCard_Validator checkCreditCardNumber:@"4545232346469999"];
+	
+
+
+### License
 ===
 The MIT License (MIT)
 Copyright (c) 2013 [Akatus](http://akatus.com)

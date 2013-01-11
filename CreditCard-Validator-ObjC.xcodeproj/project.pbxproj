@@ -24,6 +24,7 @@
 		E14DEF95169C515000B0C07E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E14DEF93169C515000B0C07E /* InfoPlist.strings */; };
 		E14DEFEB169C76D200B0C07E /* CreditCard-ValidatorSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E14DEFEA169C76D200B0C07E /* CreditCard-ValidatorSpecs.m */; };
 		E1DCBDEB16A069A20008B726 /* CreditCard-Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCBDEA16A069A20008B726 /* CreditCard-Validator.m */; };
+		E1DCBDEC16A06B300008B726 /* CreditCard-Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DCBDEA16A069A20008B726 /* CreditCard-Validator.m */; };
 		F635B40E9DE348A8B9349004 /* libPods-KiwiUnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C9A898FDEF4B0D80113BD8 /* libPods-KiwiUnitTest.a */; };
 /* End PBXBuildFile section */
 
@@ -341,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E14DEFEB169C76D200B0C07E /* CreditCard-ValidatorSpecs.m in Sources */,
+				E1DCBDEC16A06B300008B726 /* CreditCard-Validator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
