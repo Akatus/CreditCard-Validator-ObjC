@@ -452,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F4E0E24017242CBB36B71D3 /* Pods-KiwiUnitTest.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CreditCard-Validator-ObjC.app/CreditCard-Validator-ObjC";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -468,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F4E0E24017242CBB36B71D3 /* Pods-KiwiUnitTest.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CreditCard-Validator-ObjC.app/CreditCard-Validator-ObjC";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
