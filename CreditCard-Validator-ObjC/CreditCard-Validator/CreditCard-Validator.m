@@ -11,9 +11,9 @@
 //Finding or Verification Credit Card Numbers
 //http://www.regular-expressions.info/creditcard.html
 
-#define kVISA_TYPE        @"^4[0-9]{3}?"
-#define kMASTER_CARD_TYPE @"^5[1-5][0-9]{2}$"
-#define kAMEX_TYPE		@"^3[47][0-9]{2}$"
+#define kVISA_TYPE          @"^4[0-9]{3}?"
+#define kMASTER_CARD_TYPE   @"^5[1-5][0-9]{2}$"
+#define kAMEX_TYPE          @"^3[47][0-9]{2}$"
 #define kDINERS_CLUB_TYPE	@"^3(?:0[0-5]|[68][0-9])[0-9]$"
 #define kDISCOVER_TYPE		@"^6(?:011|5[0-9]{2})$"
 
